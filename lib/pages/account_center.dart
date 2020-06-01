@@ -7,6 +7,7 @@ class AccountCenter extends StatelessWidget{    //静态布局
   @override
   Widget build(BuildContext context){
     return Scaffold(
+      key: Key('AccountCenter'),
       appBar: AppBar(
         leading: IconButton(
           icon: Icon(Icons.fast_rewind), 
@@ -42,9 +43,9 @@ class AccountCenter extends StatelessWidget{    //静态布局
         children: <Widget>[
           Container(
             margin:EdgeInsets.only(top:30),
-            child: ClipOval(
-              child:Image.network('https://5b0988e595225.cdn.sohucs.com/images/20190620/da96e25f08954e189b753b1b5aae0d1b.jpeg')
-            ),
+//            child: ClipOval(
+//              child:Image.network('https://5b0988e595225.cdn.sohucs.com/images/20190620/da96e25f08954e189b753b1b5aae0d1b.jpeg')
+//            ),
           ),
           Container(
             margin:EdgeInsets.only(top:10),

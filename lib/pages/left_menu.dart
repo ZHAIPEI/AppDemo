@@ -5,6 +5,7 @@ class LeftMenu extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: Key('LeftMenu'),
       appBar: AppBar(
         title: const Text('APP DEMO-Leftmenu'),
         centerTitle: true,

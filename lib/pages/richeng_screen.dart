@@ -7,6 +7,7 @@ class RichengScreen extends StatelessWidget {
  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: Key('Richeng'),
       appBar: AppBar(
         leading: IconButton(
           icon: Icon(Icons.menu),
