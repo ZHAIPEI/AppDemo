@@ -67,7 +67,7 @@ void main() {
     expect(find.byIcon(accountCenterIcon), findsOneWidget);
   });
 
-  testWidgets('Navigate to left menu', (WidgetTester tester) async {
+  testWidgets('Navigate to left menu and navigate out', (WidgetTester tester) async {
     await tester.pumpWidget(MyApp());
 
     final leftMenuIcon = Icons.menu;
@@ -78,9 +78,19 @@ void main() {
 
     expect(find.byKey(leftMenuKey), findsOneWidget);
     expect(find.text('足球'), findsOneWidget);
+
+    // navigate out
+    final arrowBackIcon = Icons.arrow_back;
+    final bottomNavigationKey = Key('BottomNavigation');
+
+    await tester.tap(find.byIcon(arrowBackIcon));
+    await tester.pumpAndSettle();
+
+    expect(find.byKey(bottomNavigationKey), findsOneWidget);
+    expect(find.text('APP DEMO'), findsOneWidget);
   });
 
-  testWidgets('Navigate to account center', (WidgetTester tester) async {
+  testWidgets('Navigate to account center and navigate out', (WidgetTester tester) async {
     await tester.pumpWidget(MyApp());
 
     final accountCenterIcon = Icons.account_circle;
@@ -91,5 +101,15 @@ void main() {
 
     expect(find.byKey(accountCenterKey), findsOneWidget);
     expect(find.text('账号中心'), findsOneWidget);
+
+    // navigate out
+    final returnIcon = Icons.arrow_back;
+    final bottomNavigationKey = Key('BottomNavigation');
+
+    await tester.tap(find.byIcon(returnIcon));
+    await tester.pumpAndSettle();
+
+    expect(find.byKey(bottomNavigationKey), findsOneWidget);
+    expect(find.text('APP DEMO'), findsOneWidget);
   });
 }

@@ -7,7 +7,10 @@ class LeftMenu extends StatelessWidget{
     return Scaffold(
       key: Key('LeftMenu'),
       appBar: AppBar(
-        title: const Text('APP DEMO-Leftmenu'),
+        title: const Text(
+          'APP DEMO-Leftmenu',
+          key: Key('menuTitle'),
+        ),
         centerTitle: true,
         backgroundColor: Colors.red,
       ),
@@ -199,7 +202,10 @@ class LeftMenu extends StatelessWidget{
           ),
 
           ExpansionTile(
-            title:const Text('板球'),
+            title:const Text(
+                '板球',
+                key: Key('banqiu')
+            ),
             backgroundColor:Theme.of(context).accentColor.withOpacity(0.025),
             children:const <Widget>[
               ListTile(title:Text('让球/大小')),
@@ -208,7 +214,10 @@ class LeftMenu extends StatelessWidget{
               ListTile(title:Text('总进球/单双(半场)')),
               ListTile(title:Text('半全场')),
               ListTile(title:Text('最先/最后进球')),
-              ListTile(title:Text('优胜冠军')),
+              ListTile(title:Text(
+                '优胜冠军',
+                key: Key('yousheng'),
+              )),
             ]
           ),
 

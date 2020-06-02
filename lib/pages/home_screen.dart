@@ -11,6 +11,7 @@ class HomeScreen extends StatelessWidget {
       key: Key('Home'),
       appBar: AppBar(
         leading: IconButton(
+          key: Key('menuIcon'),
           icon: Icon(Icons.menu), 
           onPressed: (){
             Navigator.push(context, MaterialPageRoute(builder: (context) => new LeftMenu()));

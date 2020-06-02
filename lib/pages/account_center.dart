@@ -9,18 +9,9 @@ class AccountCenter extends StatelessWidget{    //静态布局
     return Scaffold(
       key: Key('AccountCenter'),
       appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.fast_rewind), 
-          onPressed: (){
-            Navigator.pop(context);
-          } 
-        ),
         title: Text('账号中心'),
         centerTitle: true,
-        backgroundColor: Colors.red,
-        actions:<Widget>[
-          new IconButton(icon: new Icon(Icons.fast_forward), onPressed:(){})
-        ]
+        backgroundColor: Colors.red
       ),
       body: ListView(//不会出现纵向溢出
         children: <Widget>[  
